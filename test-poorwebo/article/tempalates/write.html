@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>发表说说</h1>
+<a href="/article/home">首页</a>
+<a href="/author/logout" style="float: right;">登出</a>
+<hr>
+<form action="/article/write" method="post" enctype="multipart/form-data">
+    <p>
+        标题：<input type="text" name="title">
+    </p>
+    <textarea name="content" cols="50" rows="10"></textarea>
+    <input type="submit" value="提交">
+</form>
+
+
+{% endblock %}

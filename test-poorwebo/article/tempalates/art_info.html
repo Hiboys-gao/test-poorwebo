@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ article.title }}</h1>
+<a href="/article/del?{{ uid }}">删除</a>
+<a href="/author/logout" style="float: right;">登出</a>
+<hr>
+
+<p style="border: 1px solid lawngreen">
+    {{ article.content }}
+    <br>
+    <span style="float: right">{{ article.datetime }}</span>
+</p>
+
+{% endblock %}

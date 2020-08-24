@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}{{ title }}</title>
+    <style>
+        .div{
+            width: 1000px;
+            height: 1000px;
+            margin: auto;
+            background: skyblue;
+        }
+        .head{
+            width: 1000px;
+            height: 100px;
+            margin: auto;
+            background: gray;
+        }
+        .container{
+            width: 1000px;
+            height: 800px;
+            margin: auto;
+            background: blanchedalmond;
+        }
+        .content{
+            width: 700px;
+            height: 800px;
+            background: skyblue;
+            float: left;
+        }
+        .sidebar{
+            width: 300px;
+            height: 800px;
+            background: darkslateblue;
+            float: left;
+        }
+        .footer{
+            width: 1000px;
+            height: 100px;
+            margin: auto;
+            background: gray;
+        }
+        a{
+            text-decoration: none;
+            float: left;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="div">
+        <div class="head">
+            <a href="#"><h3>首页</h3></a>
+            <a href="#"><h3>首页</h3></a>
+            <a href="#"><h3>首页</h3></a>
+        </div>
+        <div class="container">
+            <div class="content">
+                {% block content %}
+                {% endblock %}
+            </div>
+            <div class="sidebar">
+                {% block sidebar %}
+                {% endblock %}
+            </div>
+        </div>
+        <div class="footer">
+            {% block footer %}
+                {% endblock %}
+        </div>
+    </div>
+</body>
+</html>
